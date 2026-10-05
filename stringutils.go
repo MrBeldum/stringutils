@@ -128,9 +128,9 @@ func Truncate(s string, maxLen int) string {
 }
 
 // TruncateWords cuts string to the given number of words and adds ellipsis if it was truncated
-// returns empty string if maxWords is 0
+// returns empty string if maxWords is 0 or negative
 func TruncateWords(s string, maxWords int) string {
-	if maxWords == 0 {
+	if maxWords <= 0 {
 		return ""
 	}
 

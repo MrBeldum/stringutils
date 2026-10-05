@@ -392,6 +392,12 @@ func TestTruncateWords(t *testing.T) {
 			want:     "",
 		},
 		{
+			name:     "negative max words",
+			input:    "hello beautiful world",
+			maxWords: -1,
+			want:     "",
+		},
+		{
 			name:     "multiple spaces between words",
 			input:    "hello    beautiful     world",
 			maxWords: 2,
